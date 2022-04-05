@@ -9,30 +9,39 @@ const server = http.createServer(function(req, res){
     fs.readFile('index.html', function(error, data){
         if(error) {
             res.writeHead(404)
-            res.write(' Error: File Not Found')
+            res.write(' Error: index.html File Not Found')
         }else{
             res.write(data)
         }
         res.end()
     })
-    // fs.readFile('script.js', function(error, data){
+    // fs.readFile('sketch.html', function(error, data){
     //     if(error) {
     //         res.writeHead(404)
-    //         res.write(' Error: File Not Found')
+    //         res.write(' Error: sketch.html File Not Found')
     //     }else{
     //         res.write(data)
     //     }
     //     res.end()
     // })
-    fs.readFile('style.css', function(error, data){
-        if(error) {
-            res.writeHead(404)
-            res.write(' Error: File Not Found')
-        }else{
-            res.write(data)
-        }
-        res.end()
-    })
+    // fs.readFile('script.js', function(error, data){
+    //     if(error) {
+    //         res.writeHead(404)
+    //         res.write(' Error: script.js File Not Found')
+    //     }else{
+    //         res.write(data)
+    //     }
+    //     res.end()
+    // })
+    // fs.readFile('style.css', function(error, data){
+    //     if(error) {
+    //         res.writeHead(404)
+    //         res.write(' Error: CSS File Not Found')
+    //     }else{
+    //         res.write(data)
+    //     }
+    //     res.end()
+    // })
 })
 
 server.listen(port, function(error){
